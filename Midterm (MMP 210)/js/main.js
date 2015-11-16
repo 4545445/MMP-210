@@ -1,4 +1,6 @@
-var squares;
+//global variables
+
+var squares; //array to store the squares
 
 function setup() {
     // Create the canvas
