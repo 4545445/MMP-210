@@ -11,6 +11,8 @@ var player_sprite;
 var tile_frames;
 
 var settings;//well be loaded in the JSON file
+
+var img;//testing image loading
 function preload() {
     // Load the json for the tiles sprite sheet
   settings = loadJSON('JSON/game.json');
@@ -31,7 +33,14 @@ console.log('player_walk',player_walk);
     //player_sprite.addAnimation('walk', player_walk);
 //  player_sprite.addAnimation('stand', player_stand);
 
-}
+    img = loadImage(settings.player_sprite.path, imgLoaded);
+    
+}//end setup
+
+function imgLoaded(){
+    image(img, 10, 10);
+    console.log('image loaded',img);
+}//imgLoaded
 
 function draw() {
   clear();
