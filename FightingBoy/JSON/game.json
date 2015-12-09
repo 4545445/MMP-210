@@ -1,0 +1,11 @@
+{
+    "mouse_moved": false,
+  "player_start": {"x": 10, "y": 545, "width":120,"height":182},
+  "player_sprite": {"path":"images/adamwalks.png","widthfile":960, "height":182,"numberofframes":8}
+    
+    
+    
+   
+}
+
+
