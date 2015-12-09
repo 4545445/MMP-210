@@ -19,7 +19,8 @@ function preload() {
 }//preload 
 
 function setup() {
-  createCanvas(800, 400);
+  var cnv = createCanvas(800, 400);
+     cnv.parent("walking");
     
   player_sprite_sheet= loadSpriteSheet(settings.player_sprite.path, settings.player_sprite.widthfile, settings.player_sprite.height, settings.player_sprite.numberofframes);
     console.log('spritepath',settings.player_sprite.path);
