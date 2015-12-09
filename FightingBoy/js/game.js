@@ -20,6 +20,7 @@ function setup() {
   createCanvas(800, 400);
     
   player_sprite_sheet= loadSpriteSheet(settings.player_sprite.path, settings.player_sprite.widthfile, settings.player_sprite.height, settings.player_sprite.numberofframes);
+    console.log('spritepath',settings.player_sprite.path);
      //2 Player walk animation passing in a SpriteSheet
   player_walk = loadAnimation(player_sprite_sheet);
 
