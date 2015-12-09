@@ -43,7 +43,7 @@ function imgLoaded(){
 }//imgLoaded
 
 function draw() {
-  clear();
+//  clear();
 
   //draw the sprite
   drawSprites();
