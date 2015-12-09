@@ -23,11 +23,12 @@ function setup() {
     console.log('spritepath',settings.player_sprite.path);
      //2 Player walk animation passing in a SpriteSheet
   player_walk = loadAnimation(player_sprite_sheet);
-
+console.log('player_walk',player_walk);
     
   // Create the Player sprite and add it's animations
   player_sprite = createSprite(settings.player_start.x,settings.player_start.y,settings.player_start.width,settings.player_start.height);
-  player_sprite.addAnimation('walk', player_walk);
+  console.log('player_sprite',player_sprite);
+    //player_sprite.addAnimation('walk', player_walk);
 //  player_sprite.addAnimation('stand', player_stand);
 
 }
