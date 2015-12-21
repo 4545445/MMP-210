@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Jason","lastName":"Oliver" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+
+</body>
+</html>
+
+
+{
+"player_sheet": 'assets/player_spritesheet.png',
+    "frames":[
+  {"name":"player_walk01", "frame":{"x":0, "y": 0, "width": 70, "height": 94}},
+  {"name":"player_walk02", "frame":{"x":71, "y": 0, "width": 70, "height": 94}},
+  {"name":"player_walk03", "frame":{"x":142, "y": 0, "width": 70, "height": 94}},
+  {"name":"player_walk04", "frame":{"x":0, "y": 95, "width": 70, "height": 94}},
+  {"name":"player_walk05", "frame":{"x":71, "y": 95, "width": 70, "height": 94}},
+  {"name":"player_walk06", "frame":{"x":142, "y": 95, "width": 70, "height": 94}},
+  {"name":"player_walk07", "frame":{"x":213, "y": 0, "width": 70, "height": 94}},
+  {"name":"player_walk08", "frame":{"x":284, "y": 0, "width": 70, "height": 94}},
+  {"name":"player_walk09", "frame":{"x":213, "y": 95, "width": 70, "height": 94}},
+  {"name":"player_walk10", "frame":{"x":355, "y": 0, "width": 70, "height": 94}},
+  {"name":"player_walk11", "frame":{"x":284, "y": 95, "width": 70, "height": 94}}
+],
+
+}
+
+
+
+
+
+
+
+
+
+function leftStart ()
+ {
+  animation.PlayQueued("left start");
+
+  if (animation.IsPlaying("left start") &amp;&amp; Input.GetKeyUp("left"))
+  rightStop();
+
+  else if (animation.IsPlaying("left start") &amp;&amp; Input.GetKey("left"))
+  walk();
+ }
+
+ function walk ()
+ {
+  animation.PlayQueued("right forward");
+  animation.PlayQueued("left forward");
+
+  if (animation.IsPlaying("left forward") &amp;&amp; Input.GetKeyUp("left"))
+  rightStop();
+
+  if (animation.IsPlaying("right forward") &amp;&amp; Input.GetKeyUp("left"))
+  leftStop();
+ }
+
+ function leftStop ()
+ {
+  animation.PlayQueued("left stop");
+ }
+
+ function rightStop ()
+ {
+  animation.PlayQueued("right stop");
+ }
